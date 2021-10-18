@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--link de conexion de bootstrap-->
+	<meta charset="utf-8">
+	<title>Tabla Producto</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  	<link rel="stylesheet" href="css/alertify.min.css" />
+
+</head>
+<body>
+<!-- cuerpo de la tabla del formulario-->
+<div class="container mt-4 shadow-lg p-3 mb-5  rounded ">
+    <button id="btnCrear" type="button" class="btn btn-success">Crear Producto</button>
+
+    <table id="Producto" class="table mt-2 table-bordered table-striped">
+      <thead>
+        <tr class="text-center">
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th>DESCRIPCION</th>
+          <th>REFERENCIA</th>
+          <th>CANTIDAD</th>
+          <th>CATEGORIA</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+ </div>
+ <!-- formulario modal (desplegable)-->
+ <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Productos</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-dismiss="modal"  aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+          	<!--campo de texto-->
+            <div class="mb-3">
+              <label for="id" class="col-form-label">Id producto :</label>
+              <input id="id" type="number" placeholder="Digite el código" class="form-control" id="recipient-name"
+                required autocomplete="off" oninvalid="setCustomValidity('Digite un Código')"
+                oninput="setCustomValidity('')">
+            </div>
+            <div class="mb-3">
+              <label for="nombre" class="col-form-label">Nombre Producto :</label>
+              <input id="nombre" placeholder="Digite el nombre del producto" type="text" class="form-control" id="recipient-name"
+                required autocomplete="off" oninvalid="setCustomValidity('Digite el nombre del producto')"
+                oninput="setCustomValidity('')">
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="col-form-label">Descripción :</label>
+              <input id="descripcion" placeholder="Escriba la descripción" type="text" class="form-control"
+                id="recipient-name" required autocomplete="off" oninvalid="setCustomValidity('Escriba la descripción')"
+                oninput="setCustomValidity('')">
+            </div>
+            <div class="mb-3">
+              <label for="referencia" class="col-form-label">Referencia :</label>
+              <input id="referencia" placeholder="Escriba la referencia" type="text" min="1000000000" class="form-control"
+                id="recipient-name" required autocomplete="off" oninvalid="setCustomValidity('Escriba la referencia')"
+                oninput="setCustomValidity('')">
+            </div>
+            <div class="mb-3">
+              <label for="cantidad" class="col-form-label">Cantidad :</label>
+              <input id="cantidad" placeholder="Digite la cantidad" type="number" class="form-control" id="recipient-name"
+                required autocomplete="off" oninvalid="setCustomValidity('Digite la cantidad')"
+                oninput="setCustomValidity('')">
+            </div>
+            <div class="mb-3">
+              <label for="categoria" class="col-form-label">Categoria :</label>
+              <input id="categoria" placeholder="Escriba la categoria" type="text" class="form-control" id="recipient-name"
+                required autocomplete="off" oninvalid="setCustomValidity('Escriba la categoria')"
+                oninput="setCustomValidity('')">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-dismiss="modal">Cerrar</button>
+              <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+<!-- librerias jquery y javascript-->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  	<script src="js/alertify.min.js"></script>
+  	<script src="js/tabla_de_productos.js"></script>
+
+
+</body>
+</html>
